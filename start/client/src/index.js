@@ -7,6 +7,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Pages from "./pages";
 
+// Client schema
+import { resolvers, typeDefs } from "./resolvers";
+
 const cache = new InMemoryCache();
 // const link = new HttpLink({
 //     uri: "http://localhost:4000/",
@@ -19,6 +22,8 @@ const client = new ApolloClient({
             authorization: localStorage.getItem("token"),
         },
     }),
+    typeDefs,
+    resolvers,
 });
 
 cache.writeData({
