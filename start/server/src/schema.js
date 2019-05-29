@@ -63,6 +63,8 @@ type Mutation {
   cancelTrip(launchId: ID!): TripUpdateResponse!
 
   login(email: String): String # login token
+
+  missionPatch(mission: String, size: PatchSize): PatchSize
 }
 
 type TripUpdateResponse {
