@@ -24,3 +24,12 @@ const server = new ApolloServer({
 server.listen().then(({ url }) => {
     console.log(`🚀 Server ready at ${url}`);
 })
+
+// const {paginateResults} = require('./utils')
+// const result = paginateResults({
+//     results: [1,2,34,4,5],
+//     pageSize: 2,
+//     after: 34
+// })
+
+// console.log(result)
